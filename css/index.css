@@ -136,6 +136,7 @@ body {
 }
 .resume-container {
   max-width: 800px;
+  margin: 0 auto;
 }
 header {
   width: 100%;
@@ -153,10 +154,10 @@ header nav {
   display: flex;
 }
 .sidebar {
-  width: 30%;
+  width: 25%;
   border: 1px solid red;
 }
 .experience {
-  width: 70%;
+  width: 75%;
   border: 1px solid blue;
 }
