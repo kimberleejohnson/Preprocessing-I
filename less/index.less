@@ -56,6 +56,22 @@ table {
 // Variables 
 @nanum: 'Nanum Gothic', sans-serif;
 @headercolor: blue; 
+@navcolor: azure; 
+
+// Mixins 
+.navstyle(){
+	width: 70%; 
+	display: flex;
+	justify-content: space-around; 
+	font-size: 1.5rem;
+	background-color: @navcolor; 
+}
+
+.navlinks(){
+	font-size: 1.75rem; 
+	font-style: italic; 
+}
+
 
 html, body {
 	height: 100%; 
@@ -83,33 +99,38 @@ p, li, a {
 
 .resume-container {
 	max-width: 800px; 
+	width: 100%; 
 	margin: 0 auto; 
 	font-family: @nanum; 
+
+	@media (max-width: 500px){
+		width: 100%; 
+		}
+
 }
 
+
 header {
-	width: 74%; 
-	display: flex; 
+	display: flex;   
 	flex-wrap: wrap; 
 	justify-content: center; 
 	border: 1px solid red;  
 
 	nav {
-		width: 100%; 
-		display: flex;
-		justify-content: space-around;
-		font-size: 1.5rem; 
+		.navstyle;  
 
-		nav a {
-			font-size: 2rem; 
+		a {
+			.navlinks;
 		}
 	} // nav
 
-	.header-photo {
-
-	}
-
 } // header 
+
+.header-photo {
+	width: 20%; 
+	height: auto; 
+	border: 1px solid blue; 
+}
 
 .main-content {
 	display: flex; 
@@ -148,3 +169,19 @@ header {
 		width: 100%;  
 	}
 }
+
+footer {
+	display: flex;   
+	flex-wrap: wrap; 
+	justify-content: center; 
+	border: 1px solid red;  
+
+	nav {
+		.navstyle; 
+
+		a {
+			.navlinks; 
+		}
+	} // nav
+
+} // header 
