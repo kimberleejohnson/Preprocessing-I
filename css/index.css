@@ -134,3 +134,21 @@ html,
 body {
   height: 100%;
 }
+.resume-container {
+  max-width: 800px;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid red;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+header nav nav a {
+  justify-content: space-between;
+}
