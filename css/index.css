@@ -149,6 +149,14 @@ header nav {
   display: flex;
   justify-content: space-around;
 }
-header nav nav a {
-  justify-content: space-between;
+.main-content {
+  display: flex;
+}
+.sidebar {
+  width: 30%;
+  border: 1px solid red;
+}
+.experience {
+  width: 70%;
+  border: 1px solid blue;
 }
