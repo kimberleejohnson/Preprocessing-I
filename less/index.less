@@ -53,13 +53,14 @@ table {
     box-sizing: border-box;
 }
 
-// Variables 
+// VARIABLES // 
 @nanum: 'Nanum Gothic', sans-serif;
 @bordercurves: 5px; 
 @headercolor: blue; 
 @navcolor: azure; 
+@textboxcolor: #BEDCD1; 
 
-// Mixins 
+// MIXINS // 
 
 // Saving nav and nav links styling as mixins in case I need again in the future. 
 .navstyle(){
@@ -196,6 +197,7 @@ header {
 			padding: 5%; 
 			border: 2px solid red; 
 			border-radius: @bordercurves;
+			background-color: @textboxcolor; 
 		}
 	}
 
@@ -214,16 +216,19 @@ header {
 		.skills {
 			.rightstyle; 
 			border-radius: @bordercurves;
+			background-color: @textboxcolor; 
 		}
 
 		.fun-facts {
 			.rightstyle; 
 			border-radius: @bordercurves;
+			background-color: @textboxcolor;  
 		}
 
 		.social-media{
 			.rightstyle; 
 			border-radius: @bordercurves;
+			background-color: @textboxcolor; 
 		}
 	}
 }

@@ -243,6 +243,7 @@ header nav a {
   padding: 5%;
   border: 2px solid red;
   border-radius: 5px;
+  background-color: #BEDCD1;
 }
 .body-content .other-experience {
   width: 50%;
@@ -262,18 +263,21 @@ header nav a {
   padding: 5%;
   border: 2px solid red;
   border-radius: 5px;
+  background-color: #BEDCD1;
 }
 .body-content .other-experience .fun-facts {
   margin: 5%;
   padding: 5%;
   border: 2px solid red;
   border-radius: 5px;
+  background-color: #BEDCD1;
 }
 .body-content .other-experience .social-media {
   margin: 5%;
   padding: 5%;
   border: 2px solid red;
   border-radius: 5px;
+  background-color: #BEDCD1;
 }
 footer {
   display: flex;
