@@ -235,7 +235,8 @@ header nav a {
 }
 .body-content .work-experience {
   width: 50%;
-  border-color: 2px solid green;
+  border: 2px solid green;
+  border-radius: 5px;
 }
 .body-content .work-experience .job-box {
   margin: 5%;
