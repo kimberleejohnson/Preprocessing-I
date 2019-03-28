@@ -206,6 +206,7 @@ header nav a {
   max-width: 100%;
   align-items: center;
   border: 2px solid purple;
+  border-radius: 5px;
 }
 .top-content .header-photo {
   display: flex;
@@ -234,14 +235,18 @@ header nav a {
 }
 .body-content .work-experience {
   width: 50%;
+  border-color: 2px solid green;
 }
 .body-content .work-experience .job-box {
   margin: 5%;
   padding: 5%;
   border: 2px solid red;
+  border-radius: 5px;
 }
 .body-content .other-experience {
   width: 50%;
+  border: 2px solid green;
+  border-radius: 5px;
 }
 @media (max-width: 500px) {
   .body-content .other-experience {
@@ -255,16 +260,19 @@ header nav a {
   margin: 5%;
   padding: 5%;
   border: 2px solid red;
+  border-radius: 5px;
 }
 .body-content .other-experience .fun-facts {
   margin: 5%;
   padding: 5%;
   border: 2px solid red;
+  border-radius: 5px;
 }
 .body-content .other-experience .social-media {
   margin: 5%;
   padding: 5%;
   border: 2px solid red;
+  border-radius: 5px;
 }
 footer {
   display: flex;

@@ -55,6 +55,7 @@ table {
 
 // Variables 
 @nanum: 'Nanum Gothic', sans-serif;
+@bordercurves: 5px; 
 @headercolor: blue; 
 @navcolor: azure; 
 
@@ -158,6 +159,7 @@ header {
 	max-width: 100%; 
 	align-items: center; 
 	border: 2px solid purple; 
+	border-radius: @bordercurves; 
 
 	.header-photo {
 		display: flex; 
@@ -185,17 +187,21 @@ header {
 	  }
 
 	.work-experience {
-		width: 50%; 
+		width: 50%;
+		border-color: 2px solid green;  
 
 		.job-box {
 			margin: 5%; 
 			padding: 5%; 
 			border: 2px solid red; 
+			border-radius: @bordercurves;
 		}
 	}
 
 	.other-experience {
 		width: 50%; 
+		border: 2px solid green; 
+		border-radius: @bordercurves;
 
 		@media(max-width: 500px) {
 			width: 100%; 
@@ -206,14 +212,17 @@ header {
 
 		.skills {
 			.rightstyle; 
+			border-radius: @bordercurves;
 		}
 
 		.fun-facts {
 			.rightstyle; 
+			border-radius: @bordercurves;
 		}
 
 		.social-media{
 			.rightstyle; 
+			border-radius: @bordercurves;
 		}
 	}
 }
