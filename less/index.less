@@ -33,7 +33,7 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
+	list-style: circle;
 }
 blockquote, q {
 	quotes: none;
@@ -53,7 +53,197 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+// VARIABLES // 
+@nanum: 'Nanum Gothic', sans-serif;
+@bordercurves: 5px; 
+@headercolor: blue; 
+@textboxcolor: #daf5ec; 
+
+// MIXINS // 
+
+// Saving nav and nav links styling as mixins in case I need again in the future. 
+.navstyle(){
+	width: 100%; 
+	display: flex;
+	justify-content: space-around; 
+	font-size: 1.5rem;
 }
 
+.navlinks(){
+	font-size: 1.5rem; 
+}
+
+// Saving right style as mixin so I can use it for each of the boxes on the right. 
+.rightstyle() {
+	margin: 5%; 
+	padding: 5%; 
+	border: 2px solid red; 
+}
+
+html, body {
+	height: 100%; 
+	font-size: 62.5%; 
+}
+
+h1 {
+	font-size: 3rem; 
+}
+
+h2 {
+	font-size: 2rem; 
+	text-decoration: underline; 
+}
+
+h3 {
+	font-size: 1.5rem;
+	color: blue; 
+}
+
+h4 {
+	font-size: 1.25rem; 
+}
+
+p, li, a {
+	font-size: 1.25rem; 
+}
+
+.resume-container {
+	max-width: 800px; 
+	width: 100%; 
+	margin: 0 auto; 
+	font-family: @nanum; 
+
+	@media(max-width: 500px) {
+		max-width: 500px; 
+	  }
+
+}
+
+header {
+	display: flex;   
+	flex-wrap: wrap; 
+	justify-content: center; 
+	border: 1px solid red;  
+
+	@media(max-width: 500px) {
+		width: 100%; 
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+	  }
+
+	nav {
+		.navstyle;  
+
+		@media(max-width: 500px) {
+			flex-direction: column; 
+			/* Even space between each menu item */
+			justify-content: space-evenly; 
+			/* Aligns items in the center */
+            align-items: center; 
+            width: 75%; 
+		  } 
+		
+		a {
+			.navlinks;
+			width: 100%; 
+		}
+
+	 } // nav
+} // header 
+
+.top-content {
+	display: flex; 
+	max-width: 100%; 
+	align-items: center; 
+	background-color: #dadef5; 
+	border: 2px solid purple; 
+	border-radius: @bordercurves; 
+
+	.header-photo {
+		display: flex; 
+		flex-direction: row; 
+		max-width: 20%; 
+		height: auto; 
+	}
+	
+	@media(max-width: 500px) {
+		width: 100%; 
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+	  }
+}
+
+.body-content {
+	display: flex; 
+
+	@media(max-width: 500px) {
+		width: 100%; 
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+	  }
+
+	.work-experience {
+		width: 50%;
+		border: 2px solid green;
+		border-radius: @bordercurves;  
+
+		.job-box {
+			margin: 5%; 
+			padding: 5%; 
+			border: 2px solid red; 
+			border-radius: @bordercurves;
+			background-color: @textboxcolor; 
+		}
+	}
+
+	.other-experience {
+		width: 50%; 
+		border: 2px solid green; 
+		border-radius: @bordercurves;
+
+		@media(max-width: 500px) {
+			width: 100%; 
+			display: flex; 
+			flex-direction: column;
+			align-items: center;
+		  }
+
+		.skills {
+			.rightstyle; 
+			border-radius: @bordercurves;
+			background-color: @textboxcolor; 
+		}
+
+		.fun-facts {
+			.rightstyle; 
+			border-radius: @bordercurves;
+			background-color: @textboxcolor;  
+		}
+
+		.social-media{
+			.rightstyle; 
+			border-radius: @bordercurves;
+			background-color: @textboxcolor; 
+		}
+	}
+}
+
+
+footer {
+	display: flex;   
+	flex-wrap: wrap; 
+	justify-content: center; 
+	border: 1px solid red;  
+
+	nav {
+		.navstyle; 
+
+		a {
+			.navlinks; 
+		}
+	} // nav
+
+} // footer
