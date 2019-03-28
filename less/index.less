@@ -59,8 +59,10 @@ table {
 @navcolor: azure; 
 
 // Mixins 
+
+// Saving nav and nav links styling as mixins in case I need again in the future. 
 .navstyle(){
-	width: 70%; 
+	width: 100%; 
 	display: flex;
 	justify-content: space-around; 
 	font-size: 1.5rem;
@@ -68,10 +70,15 @@ table {
 }
 
 .navlinks(){
-	font-size: 1.75rem; 
-	font-style: italic; 
+	font-size: 1.5rem; 
 }
 
+// Saving right style as mixin so I can use it for each of the boxes on the right. 
+.rightstyle() {
+	margin: 5%; 
+	padding: 5%; 
+	border: 2px solid red; 
+}
 
 html, body {
 	height: 100%; 
@@ -85,7 +92,6 @@ h1 {
 h2 {
 	font-size: 2rem; 
 	text-decoration: underline; 
-	margin-bottom: 5%; 
 }
 
 h3 {
@@ -107,72 +113,111 @@ p, li, a {
 	margin: 0 auto; 
 	font-family: @nanum; 
 
-	@media (max-width: 500px){
-		width: 100%; 
-		}
+	@media(max-width: 500px) {
+		max-width: 500px; 
+	  }
 
 }
-
 
 header {
 	display: flex;   
 	flex-wrap: wrap; 
 	justify-content: center; 
+	background-color: @navcolor; 
 	border: 1px solid red;  
+
+	@media(max-width: 500px) {
+		width: 100%; 
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+	  }
 
 	nav {
 		.navstyle;  
 
+		@media(max-width: 500px) {
+			flex-direction: column; 
+			/* Even space between each menu item */
+			justify-content: space-evenly; 
+			/* Aligns items in the center */
+            align-items: center; 
+            width: 75%; 
+		  } 
+		
 		a {
 			.navlinks;
+			width: 100%; 
 		}
-	} // nav
 
+	 } // nav
 } // header 
 
-.header-photo {
-	width: 20%; 
-	height: auto; 
-	border: 1px solid blue; 
-}
-
-.main-content {
+.top-content {
 	display: flex; 
+	max-width: 100%; 
+	align-items: center; 
+	border: 2px solid purple; 
+
+	.header-photo {
+		display: flex; 
+		flex-direction: row; 
+		max-width: 20%; 
+		height: auto; 
+	}
+	
+	@media(max-width: 500px) {
+		width: 100%; 
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+	  }
 }
 
-.sidebar {
-	width: 35%; 
-	border: 1px solid red; 
-	margin-right: 2%; 
+.body-content {
 	display: flex; 
-	flex-direction: column; 
-	justify-content: space-around; 
 
+	@media(max-width: 500px) {
+		width: 100%; 
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+	  }
 
-	.intro {	
+	.work-experience {
+		width: 50%; 
+
+		.job-box {
+			margin: 5%; 
+			padding: 5%; 
+			border: 2px solid red; 
+		}
 	}
 
-	.skills {
-		
-	}
+	.other-experience {
+		width: 50%; 
 
-	.contact {
-		
-	}
+		@media(max-width: 500px) {
+			width: 100%; 
+			display: flex; 
+			flex-direction: column;
+			align-items: center;
+		  }
 
-	.social-media {
-		 	
+		.skills {
+			.rightstyle; 
+		}
+
+		.fun-facts {
+			.rightstyle; 
+		}
+
+		.social-media{
+			.rightstyle; 
+		}
 	}
 }
 
-.experience {
-	width: 63%; 
-	border: 1px solid blue; 
-
-	.experience-box {
-		width: 100%;  
-	}
-}
 
 footer {
 	display: flex;   
@@ -188,4 +233,4 @@ footer {
 		}
 	} // nav
 
-} // header 
+} // footer

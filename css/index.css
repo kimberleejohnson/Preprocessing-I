@@ -141,7 +141,6 @@ h1 {
 h2 {
   font-size: 2rem;
   text-decoration: underline;
-  margin-bottom: 5%;
 }
 h3 {
   font-size: 1.5rem;
@@ -163,48 +162,109 @@ a {
 }
 @media (max-width: 500px) {
   .resume-container {
-    width: 100%;
+    max-width: 500px;
   }
 }
 header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: azure;
   border: 1px solid red;
 }
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 header nav {
-  width: 70%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   font-size: 1.5rem;
   background-color: azure;
 }
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+    /* Even space between each menu item */
+    justify-content: space-evenly;
+    /* Aligns items in the center */
+    align-items: center;
+    width: 75%;
+  }
+}
 header nav a {
-  font-size: 1.75rem;
-  font-style: italic;
-}
-.header-photo {
-  width: 20%;
-  height: auto;
-  border: 1px solid blue;
-}
-.main-content {
-  display: flex;
-}
-.sidebar {
-  width: 35%;
-  border: 1px solid red;
-  margin-right: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.experience {
-  width: 63%;
-  border: 1px solid blue;
-}
-.experience .experience-box {
+  font-size: 1.5rem;
   width: 100%;
+}
+.top-content {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  border: 2px solid purple;
+}
+.top-content .header-photo {
+  display: flex;
+  flex-direction: row;
+  max-width: 20%;
+  height: auto;
+}
+@media (max-width: 500px) {
+  .top-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.body-content {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .body-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.body-content .work-experience {
+  width: 50%;
+}
+.body-content .work-experience .job-box {
+  margin: 5%;
+  padding: 5%;
+  border: 2px solid red;
+}
+.body-content .other-experience {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .body-content .other-experience {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.body-content .other-experience .skills {
+  margin: 5%;
+  padding: 5%;
+  border: 2px solid red;
+}
+.body-content .other-experience .fun-facts {
+  margin: 5%;
+  padding: 5%;
+  border: 2px solid red;
+}
+.body-content .other-experience .social-media {
+  margin: 5%;
+  padding: 5%;
+  border: 2px solid red;
 }
 footer {
   display: flex;
@@ -213,13 +273,12 @@ footer {
   border: 1px solid red;
 }
 footer nav {
-  width: 70%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   font-size: 1.5rem;
   background-color: azure;
 }
 footer nav a {
-  font-size: 1.75rem;
-  font-style: italic;
+  font-size: 1.5rem;
 }
